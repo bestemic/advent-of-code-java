@@ -2,6 +2,14 @@ package com.bestemic.aoc.utils;
 
 public class Constants {
 
+    public static final String YEAR_2015 = "year2015";
+    public static final String YEAR_2016 = "year2016";
+    public static final String YEAR_2017 = "year2017";
+    public static final String YEAR_2018 = "year2018";
+    public static final String YEAR_2019 = "year2019";
+    public static final String YEAR_2020 = "year2020";
+    public static final String YEAR_2021 = "year2021";
+    public static final String YEAR_2022 = "year2022";
     public static final String YEAR_2023 = "year2023";
     public static final String YEAR_2024 = "year2024";
 
