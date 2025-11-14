@@ -13,6 +13,7 @@ import static com.bestemic.aoc.utils.Constants.DAY_01;
 import static com.bestemic.aoc.utils.Constants.YEAR_2015;
 
 public class Day01 implements Solution {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(Day01.class);
 
     /**

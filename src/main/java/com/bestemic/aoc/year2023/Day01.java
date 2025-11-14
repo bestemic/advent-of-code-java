@@ -14,6 +14,7 @@ import static com.bestemic.aoc.utils.Constants.DAY_01;
 import static com.bestemic.aoc.utils.Constants.YEAR_2023;
 
 public class Day01 implements Solution {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(Day01.class);
     private static final Map<String, Character> DIGITS_AS_STRING = Map.of(
             "one", '1',
