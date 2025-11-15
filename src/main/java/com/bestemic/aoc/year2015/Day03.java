@@ -22,6 +22,7 @@ public class Day03 implements Solution {
     /**
      * Expected output: 2565
      */
+    @Override
     public String part1(List<String> input) {
         String directions = input.getFirst();
         Set<Point> visited = new HashSet<>();
@@ -41,7 +42,6 @@ public class Day03 implements Solution {
      * Expected output: 2639
      */
     @Override
-
     public String part2(List<String> input) {
         char[] directions = input.getFirst().toCharArray();
         Set<Point> visited = new HashSet<>();
