@@ -31,7 +31,7 @@ public class Grid {
     }
 
     public void findDirection() {
-        char current = fields[currentPosition.getX()][currentPosition.getY()];
+        char current = fields[currentPosition.x()][currentPosition.y()];
         switch (current) {
             case '^':
                 direction = Direction.UP;
@@ -51,13 +51,13 @@ public class Grid {
     }
 
     public void moveForward(char mark) {
-        fields[currentPosition.getX()][currentPosition.getY()] = mark;
+        fields[currentPosition.x()][currentPosition.y()] = mark;
         currentPosition = getNextPosition();
     }
 
     private Point getNextPosition() {
-        int x = currentPosition.getX();
-        int y = currentPosition.getY();
+        int x = currentPosition.x();
+        int y = currentPosition.y();
 
         switch (direction) {
             case UP:
@@ -103,8 +103,8 @@ public class Grid {
 
     public char getNextCharacter() {
         Point newPosition = getNextPosition();
-        int x = newPosition.getX();
-        int y = newPosition.getY();
+        int x = newPosition.x();
+        int y = newPosition.y();
 
         if (x >= 0 && x < rows && y >= 0 && y < cols) {
             return fields[x][y];
