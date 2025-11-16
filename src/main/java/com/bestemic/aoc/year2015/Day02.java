@@ -17,6 +17,20 @@ public class Day02 implements Solution {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Day02.class);
 
+    public static void main(String[] args) {
+        try {
+            List<String> input = InputReader.readLines(YEAR_2015, DAY_02);
+
+            Solution solution = new Day02();
+            String solutionPart1 = solution.part1(input);
+            String solutionPart2 = solution.part2(input);
+
+            Utils.logResults(DAY_02, solutionPart1, solutionPart2);
+        } catch (IOException e) {
+            LOGGER.error("Error while reading data: {}", e.getMessage(), e);
+        }
+    }
+
     /**
      * Expected output: 1588178
      */
@@ -74,19 +88,5 @@ public class Day02 implements Solution {
         return Arrays.stream(line.split("x"))
                 .mapToInt(Integer::parseInt)
                 .toArray();
-    }
-
-    public static void main(String[] args) {
-        try {
-            List<String> input = InputReader.readLines(YEAR_2015, DAY_02);
-
-            Solution solution = new Day02();
-            String solutionPart1 = solution.part1(input);
-            String solutionPart2 = solution.part2(input);
-
-            Utils.logResults(DAY_02, solutionPart1, solutionPart2);
-        } catch (IOException e) {
-            LOGGER.error("Error while reading data: {}", e.getMessage(), e);
-        }
     }
 }

@@ -24,6 +24,20 @@ public class Day05 implements Solution {
 
     private static final Set<String> FORBIDDEN = Set.of("ab", "cd", "pq", "xy");
 
+    public static void main(String[] args) {
+        try {
+            List<String> input = InputReader.readLines(YEAR_2015, DAY_05);
+
+            Solution solution = new Day05();
+            String solutionPart1 = solution.part1(input);
+            String solutionPart2 = solution.part2(input);
+
+            Utils.logResults(DAY_05, solutionPart1, solutionPart2);
+        } catch (IOException e) {
+            LOGGER.error("Error while reading data: {}", e.getMessage(), e);
+        }
+    }
+
     /**
      * Expected output: 258
      */
@@ -79,19 +93,5 @@ public class Day05 implements Solution {
 
     private boolean hasRepeatWithGap(String word) {
         return REPEAT_WITH_GAP.matcher(word).find();
-    }
-
-    public static void main(String[] args) {
-        try {
-            List<String> input = InputReader.readLines(YEAR_2015, DAY_05);
-
-            Solution solution = new Day05();
-            String solutionPart1 = solution.part1(input);
-            String solutionPart2 = solution.part2(input);
-
-            Utils.logResults(DAY_05, solutionPart1, solutionPart2);
-        } catch (IOException e) {
-            LOGGER.error("Error while reading data: {}", e.getMessage(), e);
-        }
     }
 }

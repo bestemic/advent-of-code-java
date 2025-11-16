@@ -2,7 +2,6 @@ package com.bestemic.aoc.year2015;
 
 import com.bestemic.aoc.Solution;
 import com.bestemic.aoc.utils.InputReader;
-import com.bestemic.aoc.utils.Point;
 import com.bestemic.aoc.utils.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +17,20 @@ import static com.bestemic.aoc.utils.Constants.YEAR_2015;
 public class Day03 implements Solution {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Day03.class);
+
+    public static void main(String[] args) {
+        try {
+            List<String> input = InputReader.readLines(YEAR_2015, DAY_03);
+
+            Solution solution = new Day03();
+            String solutionPart1 = solution.part1(input);
+            String solutionPart2 = solution.part2(input);
+
+            Utils.logResults(DAY_03, solutionPart1, solutionPart2);
+        } catch (IOException e) {
+            LOGGER.error("Error while reading data: {}", e.getMessage(), e);
+        }
+    }
 
     /**
      * Expected output: 2565
@@ -72,17 +85,6 @@ public class Day03 implements Solution {
         };
     }
 
-    public static void main(String[] args) {
-        try {
-            List<String> input = InputReader.readLines(YEAR_2015, DAY_03);
-
-            Solution solution = new Day03();
-            String solutionPart1 = solution.part1(input);
-            String solutionPart2 = solution.part2(input);
-
-            Utils.logResults(DAY_03, solutionPart1, solutionPart2);
-        } catch (IOException e) {
-            LOGGER.error("Error while reading data: {}", e.getMessage(), e);
-        }
+    private record Point(int x, int y) {
     }
 }
